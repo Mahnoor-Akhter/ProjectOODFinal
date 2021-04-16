@@ -20,7 +20,7 @@ namespace Projectv2
 	/// </summary>
 	public partial class MainWindow : Window
 	{
-		JewelleryDbEntities db = new JewelleryDbEntities();
+	
 
 		public MainWindow()
 		{
@@ -29,68 +29,38 @@ namespace Projectv2
 
 		private void Window_Loaded(object sender, RoutedEventArgs e)
 		{
-			var query = from i in db.ItemTbls
-						select i;
 
-			var results = query.ToList();
-
-			//dgItems.ItemsSource = results;
 		}
 
-		//Describe what this does
-		private void btn2_Click(object sender, RoutedEventArgs e)
+		private void btn3_Click(object sender, RoutedEventArgs e)
 		{
-
+			this.Close();
 		}
 
 		private void btn1_Click(object sender, RoutedEventArgs e)
 		{
 
-		}
 
-		private void ItemsDG_CurrentCellChanged(object sender, EventArgs e)
-		{
-
-		}
-
-		private void btnreset_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void btnsave_Click(object sender, RoutedEventArgs e)
-		{
+			if (tbxpwd.Text == "" || tbxUName.Text == "")
+			{
+				MessageBox.Show("Entre UserName and Password");
+			}
+			else if (tbxUName.Text == "Admin" && tbxpwd.Text == "Password")
+			{
+			Items Obj = new Items();
+				Obj.Show();
+				this.Hide();
+			}
 
 		}
 
-		private void btnupdate_Click(object sender, RoutedEventArgs e)
+		private void btn2_Click(object sender, RoutedEventArgs e)
 		{
-
-		}
-
-		private void btndelete_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void cbxcatrgy_Loaded(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void cbxtypes_Loaded(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void cbxcatrgy_SelectionChanged(object sender, SelectionChangedEventArgs e)
-		{
-
-		}
-
-		private void btn4_Click(object sender, RoutedEventArgs e)
-		{
-
+			Billing Obj = new Billing();
+			Obj.Show();
+			this.Hide();
 		}
 	}
+
+
 }

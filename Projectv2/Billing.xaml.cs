@@ -23,5 +23,30 @@ namespace Projectv2
 		{
 			InitializeComponent();
 		}
+
+		private void btnaddbil_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btnreset2_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void CustomersDg_CurrentCellChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ItemDG_CurrentCellChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btn1_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }
