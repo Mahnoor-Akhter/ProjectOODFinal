@@ -12,9 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+//Name : Mah Noor
+//Purpose: Project about Jellwery Shop
 
 namespace Projectv2
+
 {
+	
+	
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
@@ -36,16 +41,17 @@ namespace Projectv2
 		{
 			this.Close();
 		}
-
+		//LogIn
 		private void btn1_Click(object sender, RoutedEventArgs e)
 		{
 
 
-			if (tbxpwd.Text == "" || tbxUName.Text == "")
-			{
-				MessageBox.Show("Entre UserName and Password");
-			}
-			else if (tbxUName.Text == "Admin" && tbxpwd.Text == "Password")
+			//if (tbxpwd.Text == "" || tbxUName.Text == "")
+			//{
+			//	MessageBox.Show("Entre UserName and Password");//If Press Login without entering username and password detail 
+			//}
+			//else if (tbxUName.Text == "Admin" && tbxpwd.Text == "Password")//Username and //Password
+                //Items page		
 			{
 			Items Obj = new Items();
 				Obj.Show();
@@ -53,10 +59,10 @@ namespace Projectv2
 			}
 
 		}
-
+		//Click Here
 		private void btn2_Click(object sender, RoutedEventArgs e)
 		{
-			Billing Obj = new Billing();
+			Billing Obj = new Billing();//Bil Page
 			Obj.Show();
 			this.Hide();
 		}

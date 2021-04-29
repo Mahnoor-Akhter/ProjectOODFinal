@@ -13,10 +13,10 @@ namespace Projectv2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class JewelleryDbEntities : DbContext
+    public partial class JewelleryDbEntities1 : DbContext
     {
-        public JewelleryDbEntities()
-            : base("name=JewelleryDbEntities")
+        public JewelleryDbEntities1()
+            : base("name=JewelleryDbEntities1")
         {
         }
     

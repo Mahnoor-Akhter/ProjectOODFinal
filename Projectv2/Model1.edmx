@@ -71,7 +71,7 @@
           <Property Name="ItPrice" Type="Int32" Nullable="false" />
           <Property Name="ItQty" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="JewelleryDbEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="JewelleryDbEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BillTbls" EntityType="Self.BillTbl" />
           <EntitySet Name="CustomerTbls" EntityType="Self.CustomerTbl" />
           <EntitySet Name="ItemTbls" EntityType="Self.ItemTbl" />
@@ -81,7 +81,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="JewelleryDbModelStoreContainer" CdmEntityContainer="JewelleryDbEntities">
+        <EntityContainerMapping StorageEntityContainer="JewelleryDbModelStoreContainer" CdmEntityContainer="JewelleryDbEntities1">
           <EntitySetMapping Name="BillTbls">
             <EntityTypeMapping TypeName="JewelleryDbModel.BillTbl">
               <MappingFragment StoreEntitySet="BillTbl">

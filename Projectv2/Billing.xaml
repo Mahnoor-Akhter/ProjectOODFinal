@@ -10,25 +10,21 @@
         <Rectangle x:Name="RtBoxP3" Fill="#FFD8C9E8" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="774"/>
         <StackPanel x:Name="plcustomer" HorizontalAlignment="Left" Height="3" Margin="328,41,0,0" VerticalAlignment="Top" Width="64" Background="#FF888585"/>
         <Label x:Name="lbbiling" Content="Billing" HorizontalAlignment="Left" Margin="328,10,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" RenderTransformOrigin="-0.116,0.458"/>
-        <TextBox x:Name="tbxquantity" HorizontalAlignment="Left" Height="20" Margin="207,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxprice1" HorizontalAlignment="Left" Height="20" Margin="207,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Quantity" HorizontalAlignment="Left" Margin="238,104,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="-1.068,2.151"/>
-        <Label Content="Price" HorizontalAlignment="Left" Margin="245,54,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
-        <TextBox x:Name="tbxpName1" HorizontalAlignment="Left" Height="20" Margin="52,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbxCName1" HorizontalAlignment="Left" Height="20" Margin="52,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxprice" HorizontalAlignment="Left" Height="20" Margin="189,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="189,109,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
+        <TextBox x:Name="tbxBName" HorizontalAlignment="Left" Height="20" Margin="52,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbxCName1" HorizontalAlignment="Left" Height="20" Margin="172,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label Content="Product Name" HorizontalAlignment="Left" Margin="52,104,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="-1.068,2.151"/>
-        <Label Content="Customer Name" HorizontalAlignment="Left" Margin="54,54,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
+        <Label Content="Customer Name" HorizontalAlignment="Left" Margin="172,54,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
         <Button x:Name="btnaddbil" Content="Add To Bill" HorizontalAlignment="Left" Margin="60,168,0,0" VerticalAlignment="Top" Width="112" Height="27" RenderTransformOrigin="0.631,0.72" Background="#FFEDE3FA" FontSize="18" FontFamily="Showcard Gothic"  Click="btnaddbil_Click"/>
-        <Button x:Name="btnprint2" Content="Print" HorizontalAlignment="Left" Margin="704,376,0,0" VerticalAlignment="Top" Width="80" Height="29" RenderTransformOrigin="0.631,0.72" Background="#FFEDE3FA" FontSize="18" FontFamily="Showcard Gothic"/>
         <Button x:Name="btnreset2" Content="Reset" HorizontalAlignment="Left" Margin="207,168,0,0" VerticalAlignment="Top" Width="98" Height="27" RenderTransformOrigin="0.631,0.72" Background="#FFEDE3FA" FontSize="18" FontFamily="Showcard Gothic" Click="btnreset2_Click"/>
         <Label x:Name="lbx2" Content="Customers List" HorizontalAlignment="Left" Margin="28,200,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="29"/>
-        <Label Content="Product List" HorizontalAlignment="Left" Margin="490,200,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="29"/>
-        <Label Content="Total" HorizontalAlignment="Left" Margin="404,184,0,0" VerticalAlignment="Top" FontFamily="Arial" Height="30"/>
+        <Label Content="Product List" HorizontalAlignment="Left" Margin="424,200,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="29"/>
         <Label Content="Bill" HorizontalAlignment="Left" Margin="601,31,0,0" VerticalAlignment="Top" FontFamily="Arial" FontSize="20" Height="29"/>
         <DataGrid x:Name="BillDG" HorizontalAlignment="Left" Height="144" Margin="461,60,0,0" VerticalAlignment="Top" Width="308"/>
-        <DataGrid x:Name="CustomersDg" HorizontalAlignment="Left" Height="167" Margin="28,234,0,0" VerticalAlignment="Top" Width="299" CurrentCellChanged="CustomersDg_CurrentCellChanged"/>
-        <DataGrid x:Name="ItemsDG" HorizontalAlignment="Left" Height="167" Margin="404,234,0,0" VerticalAlignment="Top" Width="295" CurrentCellChanged="ItemDG_CurrentCellChanged"/>
-        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="491,226,0,0" VerticalAlignment="Top" Width="75" Height="5" RenderTransformOrigin="0.5,0.5" Click="btn1_Click">
+        <DataGrid x:Name="CustomersDg" HorizontalAlignment="Left" Height="167" Margin="28,234,0,0" VerticalAlignment="Top" Width="299" SelectionChanged="CustomersDg_SelectionChanged"/>
+        <DataGrid x:Name="ItemsDG" HorizontalAlignment="Left" Height="167" Margin="343,234,0,0" VerticalAlignment="Top" Width="295" SelectionChanged="ItemsDG_SelectionChanged"   />
+        <Button x:Name="btn1" Content="" HorizontalAlignment="Left" Margin="447,229,0,0" VerticalAlignment="Top" Width="75" Height="5" RenderTransformOrigin="0.5,0.5" Click="btn1_Click">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -38,7 +34,13 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="btn1_Copy" Content="" HorizontalAlignment="Left" Margin="40,225,0,0" VerticalAlignment="Top" Width="75" Height="4" Click="btn1_Click"/>
+        <Button x:Name="btn2" Content="" HorizontalAlignment="Left" Margin="40,225,0,0" VerticalAlignment="Top" Width="75" Height="4" Click="btn2_Click"/>
+        <TextBox x:Name="tbxtotal" HorizontalAlignment="Left" Height="23" Margin="649,206,0,0" TextWrapping="Wrap" Text="Total" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Customer ID" HorizontalAlignment="Left" Margin="40,54,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
+        <TextBox x:Name="tbxCID" HorizontalAlignment="Left" Height="20" Margin="38,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btndelt" Content="Delete" HorizontalAlignment="Left" Margin="207,202,0,0" VerticalAlignment="Top" Width="98" Height="27" RenderTransformOrigin="0.631,0.72" Background="#FFEDE3FA" FontSize="18" FontFamily="Showcard Gothic" Click="btndelt_Click"/>
+        <TextBox x:Name="tbxqty" HorizontalAlignment="Left" Height="20" Margin="314,134,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Quantity" HorizontalAlignment="Left" Margin="314,109,0,0" VerticalAlignment="Top" FontSize="15" RenderTransformOrigin="0.543,-0.112"/>
 
     </Grid>
 </Window>
