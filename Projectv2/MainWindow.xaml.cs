@@ -41,16 +41,16 @@ namespace Projectv2
 		{
 			this.Close();
 		}
-		//LogIn
+		//LogIn Details 
 		private void btn1_Click(object sender, RoutedEventArgs e)
 		{
 
 
-			//if (tbxpwd.Text == "" || tbxUName.Text == "")
-			//{
-			//	MessageBox.Show("Entre UserName and Password");//If Press Login without entering username and password detail 
-			//}
-			//else if (tbxUName.Text == "Admin" && tbxpwd.Text == "Password")//Username and //Password
+			if (tbxpwd.Text == "" || tbxUName.Text == "")
+			{
+				MessageBox.Show("Entre UserName and Password");//If Press Login without entering username and password detail 
+			}
+			else if (tbxUName.Text == "Admin" && tbxpwd.Text == "Password")//Username and //Password
                 //Items page		
 			{
 			Items Obj = new Items();

@@ -131,6 +131,7 @@ namespace Projectv2
 			tbxCName1.Text = "";
 			tbxBName.Text = "";
 			tbxprice.Text = "";
+			tbxtotal.Text = "";
 		}
 
 

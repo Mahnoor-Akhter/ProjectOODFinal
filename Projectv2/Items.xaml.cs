@@ -78,12 +78,12 @@ namespace Projectv2
 		private void ShowItems(DataGrid currentGrid)
 		{
 			var query = from t in db.ItemTbls
-						where t.ItCat.Equals("Earings")
-						|| t.ItCat.Equals("Ring")
-						|| t.ItCat.Equals("Necklace")
-						|| t.ItCat.Equals("Brooch")
-						|| t.ItCat.Equals("Bracelet")
-						|| t.ItCat.Equals("Watch")
+						where t.ItCat.Equals("Earings")//Earings
+						|| t.ItCat.Equals("Ring")//Rings
+						|| t.ItCat.Equals("Necklace")//Necklace
+						|| t.ItCat.Equals("Brooch")//Brooch
+						|| t.ItCat.Equals("Bracelet")//Bracelet
+						|| t.ItCat.Equals("Watch")//Watch
 						orderby t.ItId descending
 						select new
 						{
@@ -94,7 +94,7 @@ namespace Projectv2
 							t.ItPrice,
 							t.ItQty
 						};
-			currentGrid.ItemsSource = query.ToList();		
+			currentGrid.ItemsSource = query.ToList();//Show details in Grid		
 		}
 
 		
@@ -154,26 +154,7 @@ namespace Projectv2
 
 		}
 
-		
-
-
-		
-		
-		
-
-		//private void filtercatry_Loaded(object sender, RoutedEventArgs e)
-		//{
-		//	List<string> categories = new List<string>();//list show in combo box of catergery
-		//	categories.Add("All");
-		//	categories.Add("Earings");//Earings
-		//	categories.Add("Necklace");//Necklace
-		//	categories.Add("Brooch");//Brooch
-		//	categories.Add("Ring");//Ring
-		//	categories.Add("Bracelet");//Bracelet
-		//	categories.Add("Watch");//Watch
-
-		//	filtercatry.ItemsSource = categories;
-		//}
+	
 	}
 
 }

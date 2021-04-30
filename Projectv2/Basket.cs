@@ -23,7 +23,7 @@ namespace Projectv2
 
 		public int GetTotalInBasket()
 		{
-			//	//loop through items and total the amount
+				//loop through items and total the amount
 			var totalprice = 0m;
 			foreach (var items in ItemsToPurchase)
 			{
@@ -33,9 +33,6 @@ namespace Projectv2
 
 		}
 
-		//public int GetTotalInBasket()
-		//{
-		  // return ItPrice * ItQty;
-		//}
+		
 	}
 }

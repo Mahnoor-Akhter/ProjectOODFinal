@@ -26,7 +26,7 @@ namespace Projectv2
 		public CustomersDetail()
 		{
 			InitializeComponent();
-
+			//Jason Data part
 			string data = JsonConvert.SerializeObject(GetRandomCustomers(), Formatting.Indented);
 			using (StreamWriter sw = new StreamWriter("c:/temp/customersdetail.json"))
 			{
@@ -118,7 +118,7 @@ namespace Projectv2
 			
 		}
 
-		//Json Formatt
+		//Json Formatt 
 		private static List<CUstdetl> GetRandomCustomers()
 		{
 			Random rand = new Random();
