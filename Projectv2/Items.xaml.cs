@@ -49,8 +49,6 @@ namespace Projectv2
 			Obj.Show();
 			this.Hide();
 		}
-
-		
 		//Reset Btn
 		private void btnreset_Click(object sender, RoutedEventArgs e)
 		{
@@ -96,8 +94,6 @@ namespace Projectv2
 						};
 			currentGrid.ItemsSource = query.ToList();//Show details in Grid		
 		}
-
-		
 		//Delete btn
 		private void btndelete_Click(object sender, RoutedEventArgs e)
 		{

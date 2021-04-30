@@ -132,11 +132,9 @@ namespace Projectv2
 			tbxBName.Text = "";
 			tbxprice.Text = "";
 			tbxtotal.Text = "";
+			tbxqty.Text = "";
 		}
-
-
 		//Prodcuct page
-
 		private void btn1_Click(object sender, RoutedEventArgs e)
 		{
 			Items Obj = new Items();
@@ -186,7 +184,7 @@ namespace Projectv2
 
 
 		}
-
+		//Delete btn
 		private void btndelt_Click(object sender, RoutedEventArgs e)
 		{
 			var Items = from b in db.BillTbls

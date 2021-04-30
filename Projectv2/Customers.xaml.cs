@@ -28,7 +28,7 @@ namespace Projectv2
 			InitializeComponent();
 			//Jason Data part
 			string data = JsonConvert.SerializeObject(GetRandomCustomers(), Formatting.Indented);
-			using (StreamWriter sw = new StreamWriter("c:/temp/customersdetail.json"))
+			using (StreamWriter sw = new StreamWriter("customersdetail.json"))
 			{
 				sw.Write(data);
 				sw.Close();
@@ -43,7 +43,6 @@ namespace Projectv2
 
 			CustomersDg.ItemsSource = results;//Costomer grid
 		}
-		
 		//Delete btn
 		private void btndelete1_Click(object sender, RoutedEventArgs e)
 		{
@@ -55,8 +54,6 @@ namespace Projectv2
 			db.SaveChanges();
 			ShowItems(CustomersDg);//show details about Customers
 		}
-
-		
 		//Save btn
 		private void btnsave1_Click(object sender, RoutedEventArgs e)
 		{
@@ -117,7 +114,6 @@ namespace Projectv2
 			tbxCphone.Text = "";
 			
 		}
-
 		//Json Formatt 
 		private static List<CUstdetl> GetRandomCustomers()
 		{
